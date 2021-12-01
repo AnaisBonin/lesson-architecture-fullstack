@@ -31,19 +31,23 @@ const port = process.env.PORT;
 //
 //
 // Connect l'app au router pour la route /beers
+
 const beersRouter = require('./router/beersRouter')
 
 // déclarer des routes : 
 // route: /beers qui envoie "hey beers"
 
-app.get('/beers', (req, res) => {
-    res.send("hey beers");
-})
+app.use('/beers', beersRouter);
 
-// récupère l'ID de l'URL donnée en params
-app.get('/beers/:id', (req, res) => {
-    res.send(`hey beer # ${req.params.id} `);
-})
+// cela remplace :
+// app.get('/beers', (req, res) => {
+//     res.send("hey beers");
+// })
+
+// // récupère l'ID de l'URL donnée en params
+// app.get('/beers/:id', (req, res) => {
+//     res.send(`hey beer # ${req.params.id} `);
+// })
 
 //
 //
