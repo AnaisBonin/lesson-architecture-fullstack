@@ -4,15 +4,16 @@ const connection = require('../dbconfig');
 // fonction pour récupérer toutes les bières en BD
 const findAll = (search) => {
 
-    let request = 'SELECT';
-
+    let request = 'SELECT ';
+ 
     if (search) {
         // concatène request avec le reste de la string :
         // ? renvoie au tableau de dépendance. = `WHERE name LIKE %${search}%`
-        request += ` * FROM beer WHERE name LIKE '?'`;
+        request += `* FROM beer WHERE name LIKE '?'`;
     } else {
-        request += ` * FROM beer`;
+        request += `* FROM beer`;
     }
+    
 
     return connection.promise().query(request, [`%${search}%`]);
 }
