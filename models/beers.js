@@ -9,7 +9,7 @@ const findAll = (search) => {
     if (search) {
         // concatène request avec le reste de la string :
         // ? renvoie au tableau de dépendance. = `WHERE name LIKE %${search}%`
-        request += `* FROM beer WHERE name LIKE '?'`;
+        request += `* FROM beer WHERE name LIKE ?`;
     } else {
         request += `* FROM beer`;
     }

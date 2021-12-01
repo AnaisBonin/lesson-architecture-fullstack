@@ -37,6 +37,10 @@ const beersRouter = require('./router/beersRouter')
 // déclarer des routes : 
 // route: /beers qui envoie "hey beers"
 
+app.get('/', (req, res) => {
+        res.send('Welcome ! Are you thirsty? then visit : /beers :) ');
+    })
+
 app.use('/beers', beersRouter);
 
 // cela remplace :
