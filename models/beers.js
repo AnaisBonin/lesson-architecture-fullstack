@@ -27,7 +27,6 @@ const findOneById = (id) => {
     return connection.promise().query(`SELECT * FROM beer WHERE id= ?`, [id]);
 }
 
-
 module.exports = {
     findAll,
     findOneById,

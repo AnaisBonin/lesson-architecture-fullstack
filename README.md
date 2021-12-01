@@ -7,3 +7,7 @@ It covers:
 - .env
 - DB config
 - routes creation with router
+
+Repo from François @ : 
+https://github.com/WildCodeSchool/remote-fr-lemuriens-express-architecture
+(only available for WCS members)
